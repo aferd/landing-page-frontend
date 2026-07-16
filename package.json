@@ -29,7 +29,10 @@
     "playwright:ui": "playwright test --ui",
     "playwright:debug": "playwright test --debug",
     "playwright:report": "playwright show-report",
-    "test:playwright": "playwright test"
+    "test:playwright": "playwright test",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook --ci --testTimeout=60000"
   },
   "repository": {
     "type": "git",
@@ -68,6 +71,7 @@
     "@playwright/test": "^1.59.1",
     "@redhat-cloud-services/eslint-config-redhat-cloud-services": "^3.0.31",
     "@redhat-cloud-services/frontend-components-config": "^6.8.3",
+    "@redhat-cloud-services/hcc-storybook-hub": "^0.2.0",
     "@redhat-cloud-services/playwright-test-auth": "^0.0.2",
     "@redhat-cloud-services/tsc-transform-imports": "^1.0.56",
     "@swc/core": "^1.15.18",
@@ -93,5 +97,10 @@
   },
   "insights": {
     "appname": "landing"
+  },
+  "msw": {
+    "workerDirectory": [
+      "static"
+    ]
   }
 }
